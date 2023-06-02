@@ -11,7 +11,7 @@ public abstract class Character {
     private Race race;
     int age;
     String name;
-    int level = 1;
+    int level;
     Gender gender;
 
     public Character(Gender gender, Race race, int age, String name) {

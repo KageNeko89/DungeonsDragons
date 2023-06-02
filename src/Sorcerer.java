@@ -34,7 +34,7 @@ public class Sorcerer extends Character implements IClass {
             dex = 12;
             str = 10;
             intel = 8;
-        } else { // creates character using 'Dice'
+        } else { // creates character using 'Dice' class
             ArrayList<Integer> stats = new ArrayList<>();
 
             // adding 6 stat rolls to an arraylist, so they can be sorted
@@ -91,6 +91,7 @@ public class Sorcerer extends Character implements IClass {
         int HP = HP1 + modifier;
 
         // setting the stats in the Character superclass
+        this.level = 1;
         this.setHitpoints(HP);
         this.setDexterity(dex);
         this.setStrength(str);
@@ -257,6 +258,26 @@ public class Sorcerer extends Character implements IClass {
     }
 
     public void die() {
-
+        this.setHitpoints(0);
+        this.setCharisma(0);
+        this.setConstitution(0);
+        this.setDexterity(0);
+        this.setIntelligence(0);
+        this.setStrength(0);
+        this.setWisdom(0);
+        this.level = 0;
+        this.proficiencyBonus = 0;
+        this.sorceryPoints = 0;
+        this.cantripsKnown = 0;
+        this.spellsKnown = 0;
+        this.spellSlotsLv1 = 0;
+        this.spellSlotsLv2 = 0;
+        this.spellSlotsLv3 = 0;
+        this.spellSlotsLv4 = 0;
+        this.spellSlotsLv5 = 0;
+        this.spellSlotsLv6 = 0;
+        this.spellSlotsLv7 = 0;
+        this.spellSlotsLv8 = 0;
+        this.spellSlotsLv9 = 0;
     }
 }
